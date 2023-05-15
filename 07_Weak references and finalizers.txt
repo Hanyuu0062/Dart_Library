@@ -1,0 +1,1 @@
+https://dart.dev/guides/libraries/library-tour#weak-references-and-finalizers
