@@ -60,20 +60,20 @@ void Extracting_data_from_a_string() {
   assert(codeUnitList.length == 17);
 }
 
-void Converting_to_uppercase_or_lowercase(){
+void Converting_to_uppercase_or_lowercase() {
   // Convert to uppercase.
-  assert('web apps'.toUpperCase()=='WEB APPS');
+  assert('web apps'.toUpperCase() == 'WEB APPS');
 
   // Convert to uppercase.
-  assert('WEB APPS'.toLowerCase()=='web apps');
+  assert('WEB APPS'.toLowerCase() == 'web apps');
 }
 
-void Trimming_and_empty_strings(){
-  //Remove all leading and trailing white space with trim(). 
+void Trimming_and_empty_strings() {
+  //Remove all leading and trailing white space with trim().
   //To check whether a string is empty (length is zero), use isEmpty.
 
   // Trim a string.
-  assert('   hello '.trim()=='hello');
+  assert('   hello '.trim() == 'hello');
 
   // Check whether a string is empty.
   assert(''.isEmpty);
@@ -82,7 +82,7 @@ void Trimming_and_empty_strings(){
   assert('   '.isNotEmpty);
 }
 
-void Replacing_part_of_a_string(){
+void Replacing_part_of_a_string() {
   var greetingTemplate = 'Hello, NAME!';
   var greeting = greetingTemplate.replaceAll(RegExp('NAME'), 'kisara');
 
@@ -90,31 +90,31 @@ void Replacing_part_of_a_string(){
   assert(greeting != greetingTemplate);
 }
 
-void Building_a_string(){
+void Building_a_string() {
   /*
   To programmatically generate a string, you can use StringBuffer. 
   A StringBuffer doesn’t generate a new String object until toString() is called. 
   The writeAll() method has an optional second parameter that lets you specify a separator—in this case, a space.
   */
-  var sb=StringBuffer();
+  var sb = StringBuffer();
   sb
     ..write('Use a StringBuffer for ')
-    ..writeAll(['efficient','string','creation'],' ')//第二个参数表示单词之间的分割符
+    ..writeAll(['efficient', 'string', 'creation'], ' ') //第二个参数表示单词之间的分割符
     ..write('.');
-  
+
   var fullSrting = sb.toString();
   print(fullSrting);
-  assert(fullSrting=='Use a StringBuffer for efficient string creation.');
+  assert(fullSrting == 'Use a StringBuffer for efficient string creation.');
 }
 
-void Regular_expressions(){
+void Regular_expressions() {
   /* 正则
   The RegExp class provides the same capabilities as JavaScript regular expressions.
    Use regular expressions for efficient searching and pattern matching of strings.
   */
 
   // Here's a regular expression for one or more digits.
-  var nums=RegExp(r'\d+');
+  var nums = RegExp(r'\d+');
   var allCharacters = 'llamas live fifteen to twenty years';
   var someDigits = 'llamas live 15 to 20 years';
 
@@ -123,6 +123,6 @@ void Regular_expressions(){
   assert(someDigits.contains(nums));
 
   // Replace every match with another string.
-  var exedOut =someDigits.replaceAll(nums, 'xx');
+  var exedOut = someDigits.replaceAll(nums, 'XX');
   assert(exedOut == 'llamas live XX to XX years');
 }
